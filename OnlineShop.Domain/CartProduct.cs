@@ -7,16 +7,13 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Domain
 {
-    public class User
+    public class CartProduct
     {
         [Key]
         public int Id { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
         [Required]
-        public string Username { get; set; }
-        [Required]
-        public string PasswordHash { get; set; }
-        [Required]
-        public string Salt { get; set; }
-        public ICollection<CartProduct> Products { get; set; }
+        public int Amount { get; set; }
     }
 }
