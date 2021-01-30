@@ -17,6 +17,7 @@ namespace OnlineShop.Domain
         public string PasswordHash { get; set; }
         [Required]
         public string Salt { get; set; }
+        public SystemFields SystemFields { get; set; }
         public ICollection<CartProduct> Products { get; set; }
     }
 }
